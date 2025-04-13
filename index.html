@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airplane - Voar alto juntos 2k25</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="theme-switcher">
+    <label for="theme">Tema:</label>
+    <select id="theme" onchange="changeTheme(this.value)">
+      <option value="pink">Rosinha Bebê</option>
+      <option value="blue">Azul Calmo</option>
+      <option value="dark">Modo Escuro</option>
+    </select>
+  </div>
+
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Study Planner</h2>
+      <ul>
+        <li onclick="showCard('toefl')">💖 TOEFL</li>
+        <li onclick="showCard('sat')">💖 SAT</li>
+        <li onclick="showCard('obmep')">💖 OBMEP</li>
+        <li onclick="showCard('oba')">💖 OBA</li>
+        <li onclick="showCard('onc')">💖 ONC</li>
+      </ul>
+      <div class="personal-notes">
+        <h3>Notas Pessoais</h3>
+        <textarea></textarea>
+      </div>
+    </aside>
+    <main class="planner">
+      <h1>Segunda-feira</h1>
+      <ul class="task-list">
+        <li><input type="checkbox"> Ler Capítulo 1 (Biologia)</li>
+        <li><input type="checkbox"> Resolver exercícios</li>
+      </ul>
+      <div class="course-container">
+        <div class="course-card hidden" id="toefl"><h2>Curso TOEFL (6 meses)</h2><p>Semana 1: Reading avançado</p></div>
+        <div class="course-card hidden" id="sat"><h2>Curso SAT (6 meses)</h2><p>Semana 1: Critical Reading + Math</p></div>
+        <div class="course-card hidden" id="obmep"><h2>Curso OBMEP (6 meses)</h2><p>Semana 1: Álgebra básica</p></div>
+        <div class="course-card hidden" id="oba"><h2>Curso OBA (6 meses)</h2><p>Semana 1: Astronomia básica</p></div>
+        <div class="course-card hidden" id="onc"><h2>Curso ONC (6 meses)</h2><p>Semana 1: Ciências e método científico</p></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <h3>Entrar / Criar Conta</h3>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Senha" />
+      <input type="password" id="confirm" placeholder="Confirmar senha" />
+      <button onclick="login()">Entrar</button>
+      <button onclick="signup()">Criar Conta</button>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
